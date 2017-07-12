@@ -22,8 +22,8 @@ driver.get('https://ca.yahoo.com/')
 print('title of the page : '+driver.title)
 
 # push Finance link
-element=driver.find_element_by_xpath('//*[@id="yui_3_18_0_4_1499814448691_1063"]')
-element.sendKeys(Keys.CONTROL)
+element=driver.find_element_by_css_selector("a[href='https://ca.finance.yahoo.com/']")
+
 element.click()
 #input_box.click('')
 #input_box = driver.find_elements_by_link_text('Finance')
