@@ -2,7 +2,7 @@
 #Author Chinatsu Kawakami
 #Name: autoFinance.py
 #Description This is the automation program to get stock information from Yahoo.ca with Python and jenkins
-#version :1.1
+#version :1.4 Add code to check CAD/US chart
 
 
 #!/bin/bash -ex
@@ -31,5 +31,8 @@ search_info = driver.find_element_by_name('p')
 search_info.send_keys('AMZN')
 search_info.send_keys(Keys.ENTER)
 
+# push the link to get more info
 
+get_moreInfo = driver.find_element_by_css_selector("a[href='/quote/CADUSD=X?p=CADUSD=X']")
+get_moreInfo.send_keys(Keys.ENTER)
 
