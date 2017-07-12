@@ -23,17 +23,13 @@ print('title of the page : '+driver.title)
 
 # push Finance link
 element=driver.find_element_by_css_selector("a[href='https://ca.finance.yahoo.com/']")
-
 element.click()
-#input_box.click('')
-#input_box = driver.find_elements_by_link_text('Finance')
 
+#search specific stock info 'AMZN'
 
-
-
-
-
-
+search_info = driver.find_element_by_name('p')
+search_info.send_keys('AMZN')
+search_info.send_keys(Keys.ENTER)
 
 
 
